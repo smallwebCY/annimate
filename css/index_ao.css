@@ -1,0 +1,281 @@
+@charset "utf-8";
+html{
+	width: 100%;
+	/*height: 100%;*/
+	overflow-x: hidden;
+}
+body {
+	width: 100%;
+	/*height: 100%;*/
+	overflow-x: hidden;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body,
+div,
+td {
+	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+@font-face{
+        font-family: 'open-sans';
+        src: url('./image/Regular.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+.fadeOut{
+	display: none;
+}
+.bigBox {
+	width: 100%;
+	overflow-x: hidden;
+	
+	background-size: 100%;
+	position: relative;
+}
+.bigBox .bgWrap {
+    width: 100%;
+}
+.bigBox .bgWrap .bg{
+    width: 100%;float: left;
+    
+}
+.bigBox .head_txt {
+	position: absolute;
+	width: 50%;
+	top: 2%;
+	left: 25%;
+}
+.bigBox .head_txt img {
+	width: 100%;
+}
+.aonniu{
+	width: 79px;
+    height: 126px;
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    z-index: 999;
+}
+.aonniu{
+	-webkit-animation-name: firstWrap;
+	-webkit-animation-timing-function:linear;
+       -webkit-animation-duration: 33500ms;
+       -webkit-animation-delay: 2s;
+       /*-webkit-animation-iteration-count: infinite;*/
+      -webkit-animation-fill-mode: both;
+       -moz-animation-name: firstWrap;
+       -moz-animation-timing-function:linear;
+       -moz-animation-duration: 33500ms;
+       -moz-animation-delay: 2s;
+       /*-moz-animation-iteration-count: infinite;*/
+      -moz-animation-fill-mode: both;
+       animation-timing-function:linear;
+       animation-fill-mode: both;
+}
+
+@-webkit-keyframes firstWrap {
+        0% {
+           left: 33%;
+           top: 20%;
+       }
+       /*1*/
+       14% {
+           left:43%;
+		   top:25%;
+       }
+	   16% {
+           left:43%;
+		   top:25%;
+       }
+       18% {
+           left:43%;
+		   top:25%;
+       }
+       /*2*/
+       30% {
+	        left: 43%;
+	    	top: 35%;
+       }
+       32% {
+           left: 43%;
+	    	top: 35%;
+       }
+       34% {
+           left: 43%;
+	    	top: 35%;
+       }
+       /*3*/
+	   56% {
+    	   left: 30%;
+    		top: 48%;
+       }
+       58% {
+    		left: 30%;
+    		top: 48%;
+       }
+       60% {
+    	   left: 30%;
+    		top: 48%;
+       }
+       /*4*/
+       76%{
+    	left: 53%;
+    	top: 61%;
+       }
+       78%{
+    	left: 53%;
+    	top: 61%;
+       }
+       80%{
+    	left: 53%;
+    	top: 61%;
+       }
+       100% {
+        left: 37%;
+		top: 80%;
+       }
+   }
+#niu{
+	width: 79px;
+    height: 126px;
+	position: absolute;
+	background: url(../img_ao/ao_bg3.png) no-repeat 2px 2px;
+	background-size: 200%;
+}
+
+
+.annimat_ao {
+       -webkit-animation-name: person-slow;
+       -webkit-animation-duration: 900ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-delay: 2s;
+       -webkit-animation-timing-function: steps(1, start);
+       /*-webkit-animation-fill-mode: both;*/
+       -moz-animation-name: person-slow;
+       -moz-animation-duration: 900ms;
+       /*-moz-animation-fill-mode: both;*/
+        -moz-animation-delay: 2s;
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: steps(1, start);
+   }
+   @-webkit-keyframes person-slow {
+       0% {
+           background-position: 2px 2px;
+       }
+       
+       50% {
+           background-position: -76px 2px;
+       }
+       
+       100% {
+           background-position: 2px 2px;
+       }
+   }
+   
+   @-moz-keyframes person-slow {
+        0% {
+           background-position: 2px 2px;
+       }
+       
+       50% {
+           background-position: -76px 2px;
+       }
+       
+       100% {
+           background-position: 2px 2px;
+       }
+   }
+.aotree{
+	position: relative;
+    width: 90%;
+    height: 66%;
+    left: 5%;
+    top: 33%;
+}
+.aotree img{
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+.flower img{
+	display: block;
+}
+.list1{
+       width: 42%;
+    position: absolute;
+    left: 58%;
+    top: 27%;
+}
+
+.list1 p{
+    width: 82%;
+    font-family: Times New Roman,"open-sans","幼圆",sans-serif;
+    
+    padding-right: 10px;
+}
+.list1 img {
+    width: 100%;
+}
+.flower .list1 p,.flower .list3 p{
+       text-align: right;
+       float: right;
+}
+.list2{
+	width: 50%;
+	position: absolute;
+    left: 0%;
+    top: 31%;
+}
+.list2 a{
+	text-decoration: none;
+	color: #000000;
+}
+.list2 img{
+	width: 100%;
+}
+.flower .list2 p{
+    margin: -34px 0 0 10px;
+}
+.list3{
+	width: 58%;
+    position: absolute;
+    left: 42%;
+    top: 48%;
+}
+.list3 img{
+	width: 100%;
+}
+.list3 p{
+	width: 50%;
+    float: right;
+    padding-right: 10px;
+}
+.list4{
+	width: 50%;
+    position: absolute;
+    left: 1%;
+    top: 60%;
+}
+.list4 img{
+	width: 100%;
+}
+.list5{
+	width: 46%;
+    position: absolute;
+    /* left: 64%; */
+    right: 0;
+    top: 77%;
+}
+.list5 img{
+	width: 100%;
+}
+.pbBox{
+	text-align:center;
+	display:none;
+}
+
+

@@ -1,0 +1,284 @@
+@charset "utf-8";
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	/*overflow-y:auto;*/
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body,
+div,
+td {
+	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
+}
+.fadeOut{
+	display: none;
+}
+.containner {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/背景.png);
+	background-size: 100%;
+	position: relative;
+}
+
+.containner .head_txt {
+	position: absolute;
+	width: 50%;
+	top: 2%;
+	left: 25%;
+}
+
+.containner .head_txt img {
+	/*position: absolute;*/
+	width: 100%;
+	/*top: 20%;*/
+}
+.niu {
+	position: absolute;
+	width: 6%;
+	height: 14%;
+	animation: myfirst 8s linear .5s both;
+	-webkit-animation: myfirst 8s linear .5s both;
+}
+.niu img:last-child {
+	width: 18%;
+	float: right;
+    margin-top: 22%;
+}
+
+@keyframes myfirst {
+	
+	0%{
+		width: 6%;
+		top: 15%;
+		left: 77%;
+	}
+	100%{
+		width: 30%;
+		top: 17%;
+		left: 18%;
+	}
+}
+@-webkit-keyframes myfirst {
+	0%{
+		width: 6%;
+    	top: 15%;
+    	left: 77%;
+	}
+	100%{
+		width: 30%;
+    	top: 16%;
+    	left: 18%;
+	}
+}
+#niu_yh{
+	width: 100%;
+	height: 100%;
+	background: url(../img/ao_bg.png) no-repeat left top;
+	background-size: 200%;
+}
+.annimat_yh {
+       -webkit-animation-name: person-slow;
+       -webkit-animation-duration: 1000ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-timing-function: steps(1, start);
+       -moz-animation-name: person-slow;
+       -moz-animation-duration: 1000ms;
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: steps(1, start);
+   }
+   @-webkit-keyframes person-slow {
+       0% {
+           background-position: 104% 0px;
+       }
+       
+       50% {
+           background-position: 0% 0px;
+       }
+       
+       100% {
+           background-position: 104% 0px;
+       }
+   }
+   
+   @-moz-keyframes person-slow {
+        0% {
+           background-position: 104% 0px;
+       }
+       
+       50% {
+           background-position: 0% 0px;
+       }
+       
+       100% {
+           background-position: 104% 0px;
+       }
+   }
+.history {
+	position: absolute;
+	width: 90%;
+    height: 68%;
+    margin-left: 5%;
+    margin-top: 48%;
+	/*background: salmon;*/
+}
+.history img{
+	display: block;
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+.history img{
+	height: 100%;
+}
+.flower{
+	position: relative;
+	width: 90%;
+    height: 68%;
+    margin-left: 5%;
+    margin-top: 48%;
+}
+.list1{
+	width: 50%;
+	position: absolute;
+    left: 56%;
+    top: 14%;
+}
+.list1 img{
+	width: 18%;
+    display: block;
+    float: left;
+}
+.list1 p{
+	font-size: 12px;
+    float: left;
+}
+.list2{
+	width: 60%;
+	position: absolute;
+    left: 0%;
+    top: 20%;
+}
+.list2 a{
+	text-decoration: none;
+	color: #000000;
+}
+.list2 img{
+	width: 22%;
+    display: block;
+    position: absolute;
+    left: 48%;
+}
+.list2 p{
+	font-size: 12px;
+	width: 50%;
+}
+.list3{
+	width: 60%;
+	position: absolute;
+    left: 38%;
+    top: 42%;
+}
+.list3 a{
+	text-decoration: none;
+	color: #000000;
+}
+.list3 img{
+	width: 30%;
+    display: block;
+    float: left;
+    position: absolute;
+    /* left: 12%; */
+    top: 28%;
+}
+.list3 p{
+	font-size: 12px;
+    width: 70%;
+    float: right;
+}
+.list4{
+	width: 60%;
+	position: absolute;
+    left: 0%;
+    top: 58%;
+}
+.list4 a{
+	text-decoration: none;
+	color: #000000;
+}
+.list4 img{
+	width: 42%;
+    display: block;
+    left: 48%;
+}
+.list4 p{
+	font-size: 12px;
+}
+.list5{
+	width: 60%;
+	position: absolute;
+    left: 50%;
+    top: 72%;
+}
+.list5 a{
+	text-decoration: none;
+	color: #000000;
+}
+.list5 img{
+	width: 30%;
+    display: block;
+    float: left;
+    position: absolute;
+    /* left: 12%; */
+    top: 28%;
+}
+.list5 p{
+	font-size: 12px;
+    width: 70%;
+    float: right;
+}
+/*内页2*/
+.bigBox {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/bgimg.png);
+	background-size: 100%;
+	position: relative;
+}
+.bigBox .head_txt {
+	position: absolute;
+	width: 50%;
+	top: 2%;
+	left: 25%;
+}
+.bigBox .head_txt img {
+	width: 100%;
+}
+.aonniu{
+	position: absolute;
+	width: 36%;
+    left: 40%;
+    top: 18%;
+	
+}
+.aonniu img{
+	
+	width: 100%;
+}
+.aotree img{
+	position: absolute;
+    /* width: 33%; */
+    height: 66%;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+}

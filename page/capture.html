@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/capture.css"/>
+
+		
+	</head>
+	<body>
+		<div class="capture-wrap">
+			<div class="tongs">
+				<img class="test" src="../cap-img/tongs.png"/>
+			</div>
+			<div class="fence">
+				<img src="../cap-img/fence.png"/>
+			</div>
+			<div class="btn-base">
+				<img src="../cap-img/btn-base.png"/>
+				
+			</div>
+			<div class="btn assistBtn">
+				<img src="../cap-img/btn.png"/>
+			</div>
+			<div class="cow-list">
+				<div class="cow cow1 movecow1">
+					<div class="trans trans-wrap">
+						<div class="cow1-wrap">
+						
+						</div>
+					</div>
+				</div>
+				
+				<div class="cow cow2 movecow2">
+					<img src="../cap-img/milk-cow2.png"/>
+				</div>
+				<div class="cow cow3 movecow3">
+					<div class="trans trans-wrap">
+						<div class="cow3-wrap">
+						
+						</div>
+					</div>
+				</div>
+				<img class="cow cow4" src="../cap-img/milk-cow4.png"/>
+				<img class="cow cow5" src="../cap-img/milk-cow5.png"/>
+				<!--<img class="cow cow6" src="../cap-img/milk-cow6.png"/>-->
+				<div class="cow cow6 movecow6">
+					<div class="trans trans-wrap">
+						<div class="cow6-wrap">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section id="areaLayer" class="express-area-box">
+            <header>
+                <h3>选择地区</h3>
+                <a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+                <a id="closeArea" class="close" href="javascript:void(0)" title="关闭"></a>
+            </header>
+            <article id="areaBox">
+                <ul id="areaList" class="area-list"></ul>
+            </article>
+        </section>
+        <!--遮罩层-->
+        <div id="areaMask" class="mask"></div>
+		<!--<div class="prize-layer">
+			<div class="prize-wrap">
+				<div class="prize-txt">
+					<h1>恭喜你</h1>
+					<p>获得刻度加热玻璃奶壶</p>
+				</div>
+				<div class="information">
+					<input type="text" name="" id="name" value="" placeholder="请填写姓名"/>
+					<input type="text" name="" id="" value="" placeholder="请填写手机号码获取"/><label for=""></label>
+					
+					<section class="express-area">
+			            <a id="expressArea" href="javascript:void(0)">
+			                <dl>
+			                    <dd>省   市   区/县</dd>
+			                </dl>
+			            </a>
+			        </section>
+			        
+			        
+					<input type="text" name="" id="" value="" placeholder="请输入详细地址"/><label for=""></label>
+				</div>
+				<div class="prize-confirm">
+					<img class="tell" src="../cap-img/getPrize.png"/>
+				</div>
+			</div>
+		</div>-->
+		
+		<audio controls="controls" id="player" preload="auto">
+			<source src="../img/gameBgm.mp3" type="audio/ogg">
+		</audio>
+	</body>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/jquery.area.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/capture.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var aud = document.getElementById("player");
+	if(isWeiXin()){ 
+		aud.empty()
+		wx.config({
+    
+		});
+		
+		wx.ready(function () {
+		    aud.src = "./img/gameBgm.mp3";
+		    aud.play();
+		});
+		aud.onstalled = function() {
+	    	alert("媒体数据不可用！");
+		};
+	}else{
+		aud.play();
+	}
+	function isWeiXin(){ 
+		var ua = window.navigator.userAgent.toLowerCase(); 
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+			return true; 
+		}else{ 
+			return false; 
+		} 
+	} 
+	</script>
+</html>

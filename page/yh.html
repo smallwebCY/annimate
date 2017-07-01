@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>inm产品追溯</title>
+		<link rel="stylesheet" type="text/css" href="../css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div class="containner">
+			<div class="head_txt animated fadeInDown">
+				<img src="../img/txt.png"/>
+			</div>
+			<div class="niu test">
+				<div id = "niu_yh" class="annimat_yh">
+					
+				</div>
+			</div>
+			<div class="history fadeOut">
+				<img class="" src="../img/tree.png"/>
+				
+			</div>
+			<div class="flower">
+				<div class="list list1 animated fadeOut">
+					<img src="../img/奶桶.png"/>
+					<p>※高山牧场的牛奶<br>※8:30从牧场出来</p>
+				</div>
+				<div class="list list2 animated fadeOut">
+					<img src="../img/菌种.png"/>
+					<p>※来至欧洲公司
+  05批次的菌种<br>※详情请点击<a href="www.jkshdha.com">
+  www.jkshdha.com</a></p>
+				</div>
+				
+				<div class="list list3 animated fadeOut">
+					<img src="../img/砂糖.png"/>
+					<p>※高山牧场的牛奶<br>※8:30从牧场出来</p>
+				</div>
+				
+				
+				<div class="list list4 animated fadeOut">
+					<img src="../img/工厂2.png"/>
+					<p>※高山牧场的牛奶<br>※8:30从牧场出来</p>
+				</div>
+				<div class="list list5 animated fadeOut">
+					<img src="../img/检测报告.png"/>
+					<p>※高山牧场的牛奶<br>※8:30从牧场出来</p>
+				</div>
+				
+			</div>
+		</div>
+		<audio autoplay="autoplay" preload="auto" src="../image/audio.wav"></audio>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var aud = document.getElementsByTagName("audio")[0];
+            aud.play();
+            
+        var time = setInterval(function(){
+				$("#niu_yh").removeClass("annimat_yh");
+				$(".test").removeClass("niu");
+			},8500);
+		var time1  = setTimeout(function(){
+			$(".niu").find("img").eq(1).fadeIn();
+		},4500);
+		var time2 = setTimeout(function(){
+			$(".history").fadeIn("slow",function(){
+				$('.list').eq(0).removeClass("fadeOut").addClass("bounceInRight");
+			})
+			
+		},5000);
+		var time3 = setTimeout(function(){
+			
+			$('.list').eq(1).removeClass("fadeOut").addClass("wobble");
+		},6500);
+		
+		var time4 = setTimeout(function(){
+			
+			$('.list').eq(2).removeClass("fadeOut").addClass("zoomInRight");
+		},7000);
+		var time5 = setTimeout(function(){
+			
+			$('.list').eq(3).removeClass("fadeOut").addClass("fadeInLeft");
+		},8000);
+		var time6 = setTimeout(function(){
+			
+			$('.list').eq(4).removeClass("fadeOut").addClass("lightSpeedIn");
+		},8500);
+		
+	</script>
+</html>

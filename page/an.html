@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>inm产品追溯</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="" />
+		<link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index_ao.css" />
+	</head>
+
+	<body>
+		<body>
+			<div class="bigBox">
+				<div class="bgWrap">
+					<img class="bg" src="../img_ao/bgimg.png" />
+				</div>
+				<div class="head_txt animated fadeInDown">
+					<img src="../img_ao/downtxt.png" />
+				</div>
+
+				<div class="aonniu test">
+					<div id = "niu" class="">
+						
+					</div>
+				</div>
+
+				<div class="flower">
+					<div class="list list1 fadeOut animated">
+						<img class="" src="../img_ao/tree1.png" />
+						<p class="animated">8月8日7点挤奶<br /> 6点出牧场
+							<br>8月8日7点挤奶<br /> 6点出牧场
+						</p>
+					</div>
+					<div class="list list2 fadeOut animated">
+						<img class="" src="../img_ao/tree2.png" />
+						<p class="animated">※牛奶8点工厂<br /> ※牛奶6点生产<br /> ※牛奶6点生产
+						</p>
+					</div>
+
+					<div class="list list3 fadeOut animated">
+						<img class="animated" src="../img_ao/tree3.png"/>
+						<p class="">※牛奶5点到奶吧</p>
+					</div>
+				
+				
+					<div class="list list4 fadeOut animated">
+						<img class="" src="../img_ao/tree4.png"/>
+					</div>
+					
+					<div class="gift-box list5 fadeOut animated">
+						<img src="../img_ao/closeEgg.png"/>
+					</div>
+				</div>
+			</div>
+
+			
+			<audio preload="auto" autoplay="autoplay" id="musicBox" name="media"></audio>
+					
+			
+		</body>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+		var aud = document.getElementsByTagName("audio")[0];
+		wx.config({
+    
+		});
+		wx.ready(function () {
+			console.log("1")
+		    aud.src = "img/audio.mp3"
+		    aud.play();
+		});
+		var media = document.getElementById("musicBox");
+			if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+   			WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
+       		console.log(res)
+       		media.play();
+   			});
+			}
+		var niu = document.getElementById("niu");
+		niu.className = "annimat_ao";
+//		var aud = document.getElementsByTagName("audio")[0];
+//		aud.play();
+//		$("#niu").removeClass("annimat_ao");
+//		$(".aonniu").removeClass("aonniu");
+//		$("#niu").css("left":"37","top":"80%","z-index":999)
+		var closeSrc = "../img_ao/"+"closeEgg.png";
+		var openSrc = "../img_ao/"+"openEgg.png";
+			var time = setInterval(function(){
+				$("#niu").removeClass("annimat_ao")
+			},35500);
+			var time2 = setInterval(function(){
+				$(".list1").removeClass("fadeOut").addClass("bounceIn")
+			},7000);
+			var time3 = setInterval(function(){
+				$(".list2").removeClass("fadeOut").addClass("bounceInLeft")
+			},12500)
+			var time4 = setInterval(function(){
+				$(".list3").removeClass("fadeOut").addClass("bounceInRight")
+			},21500)
+			var time5 = setInterval(function(){
+				$(".list4").removeClass("fadeOut").addClass("rubberBand")
+			},28000)
+			var time6 = setInterval(function(){
+				$(".list5").removeClass("fadeOut").addClass("fadeIn")
+			},35500)
+			//21500
+			var time7 = setInterval(function(){
+					if(!$(".gift-box").hasClass("fadeOut")){
+					var newSrc = $(".gift-box img").attr("src");
+					newSrc == closeSrc?$(".gift-box img").attr("src",openSrc):$(".gift-box img").attr("src",closeSrc);
+					}
+			},1000)
+			$(".gift-box").on("touchend",function(){
+				window.location.href = "capture.html";
+			})
+			$(document).on("touchmove",function(evt){
+				var evtObj = evt||window.event;
+				evtObj.preventDefault();
+			})
+			$(document).on("click",function(evt){
+				var evtObj = evt||window.event;
+				evtObj.preventDefault();
+				evtObj.stopPropagation();
+			})
+			var docHeight = $(document).height();
+			
+			$("body,html").scrollTop(docHeight);
+var time7 = setInterval(function(){
+				var view3 = $(".aonniu").offset().top-200;
+				var cowHeight = $(".aonniu").height();
+				var docHeight = $(document).height();
+				$("body,html").animate({
+						scrollTop: view3
+					},100)
+				if(view3+cowHeight>=docHeight/2){
+					
+				clearInterval(time7);
+				}
+			
+			},100)
+			
+		</script>
+</html>

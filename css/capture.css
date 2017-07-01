@@ -1,0 +1,461 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.capture-wrap{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../cap-img/cap-bg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+.capture-wrap .tongs{
+	position: absolute;
+	height: 70%;
+	z-index: 20;
+	top: -60%;
+}
+.capture-wrap .left-right{
+	-webkit-animation: leRi 2s linear infinite alternate ;
+}
+@-webkit-keyframes leRi{
+	from{left:10.3%}
+	to{left: 66.6%;}
+}
+.capture-wrap .tongs img{
+	height: 100%;
+    width: auto;
+}
+.capture-wrap .btn-base{
+	z-index: 11;
+	position: absolute;
+	/*width: 100%;*/
+	overflow: hidden;
+	height: 20%;
+	bottom: 0;
+}
+.capture-wrap .btn-base img{
+	width: 100%;
+	/*height: 20%;*/
+}
+.capture-wrap .cow-list{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	z-index: 9;margin-top: 75%;
+}
+.capture-wrap .cow-list .cow{
+	position: absolute;
+	display: block;
+	width: 30%;
+}
+.cow-list .cow1{
+	right: 1%;
+	z-index: 1;
+	height: 50%;
+	position: relative;
+	overflow: hidden;
+	
+}
+.cow-list .cow1 img{
+	position: absolute;
+	width: 200%;
+}
+.cow-list .movecow1{
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation:cow1 8s linear infinite;
+}
+@-webkit-keyframes cow1{
+	0%{left: 70%;}
+	
+	50%{left: 50%;
+	}
+	
+	100%{left: 70%;}
+	
+}
+.cow-list .cow1 .cow1-wrap{
+	width: 100%;
+	height: 100%;
+	background-image: url(../cap-img/milk-cow1-1.png);
+	background-size: 200%;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-animation-name:cow1-mov;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: cow1-mov;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes cow1-mov{
+	0%{background-position: 0%;}
+	50%{background-position: 100%;}
+	100%{background-position: 0%;}
+}
+.cow-list .cow1 .trans-wrap{
+	width: 100%;
+	height: 100%;
+	}
+.cow-list .cow1 .trans{
+	
+	-webkit-animation-name:trans;
+	-webkit-animation-duration: 8000ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: trans;
+    -moz-animation-duration: 8000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes trans{
+	0%{-webkit-transform: rotateY(0deg);}
+	50%{-webkit-transform: rotateY(180deg);}
+	100%{-webkit-transform: rotateY(0deg);}
+}
+.cowfix1{
+	right: 10%!important;
+}
+.cow-list .cow2{
+	left: 8%;
+	top: 15%;
+	z-index: 2;
+	height: 50%;
+	position: relative;
+	overflow: hidden;
+}
+.cow-list .cow2 img{
+	width: 410%;
+	position: absolute;
+	left: -194%;
+	}
+.cow-list .movecow2 img{
+	-webkit-animation-name:cow2;
+	-webkit-animation-duration: 5000ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	/*-webkit-animation-direction: alternate;*/
+	
+	
+	-moz-animation-name: cow2;
+       -moz-animation-duration: 5000ms;
+       /*-moz-animation-fill-mode: both;*/
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes cow2{
+	0%{left: -194%;}
+	50%{left: -292%;}
+	100%{left: -194%;}
+}
+.cow-list .cow3{
+	left: 40%;
+	top: 49%;
+	z-index: 6;
+	height: 50%;
+	overflow: hidden;
+}
+.cow-list .movecow3{
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation:cow3 12s linear infinite;
+}
+@-webkit-keyframes cow3{
+	0%{left: 40%;}
+	50%{left: 6%;}
+	100%{left: 40%;}
+}
+.cow-list .cow3 .cow3-wrap{
+	width: 100%;
+	height: 100%;
+	background-image: url(../cap-img/milk-cow3-1.png);
+	background-size: 200%;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-animation-name:cow3-mov;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: cow3-mov;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes cow3-mov{
+	0%{background-position: 0%;}
+	50%{background-position: 104%;}
+	100%{background-position: 0%;}
+}
+.cow-list .cow3 .trans-wrap{
+	width: 100%;
+	height: 100%;
+	}
+.cow-list .cow3 .trans{
+	
+	-webkit-animation-name:trans3;
+	-webkit-animation-duration: 12000ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: trans3;
+    -moz-animation-duration: 12000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes trans3{
+	0%{-webkit-transform: rotateY(0deg);}
+	50%{-webkit-transform: rotateY(180deg);}
+	100%{-webkit-transform: rotateY(0deg);}
+}
+.cowfix3{
+	left: 23%!important;
+}
+.cow-list .cow4{
+	left: 34%;
+	top: 24%;
+	z-index: 4;
+}
+.cow-list .cow5{
+	top: 20%;
+	left: 66%;
+	z-index: 5;
+}
+.cow-list .cow6{
+	top: 40%;
+	left: 66%;
+	z-index: 5;
+	height: 60%;
+	overflow: hidden;
+}
+.cow-list .movecow6{
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation:cow6 10s linear infinite;
+}
+@-webkit-keyframes cow6{
+	0%{left: 66%;}
+	50%{left: 40%;}
+	100%{left: 66%;}
+}
+
+
+.cow-list .cow6 .cow6-wrap{
+	width: 100%;
+	height: 100%;
+	background-image: url(../cap-img/milk-cow6-1.png);
+	background-size: 200%;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-animation-name:cow6-mov;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: cow6-mov;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes cow6-mov{
+	0%{background-position: 0%;}
+	50%{background-position: 100%;}
+	100%{background-position: 0%;}
+}
+.cow-list .cow6 .trans-wrap{
+	width: 100%;
+	height: 100%;
+	}
+.cow-list .cow6 .trans{
+	
+	-webkit-animation-name:trans6;
+	-webkit-animation-duration: 10000ms;
+	-webkit-animation-timing-function: steps(1,end);
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: trans6;
+    -moz-animation-duration: 10000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, end);
+}
+@-webkit-keyframes trans6{
+	0%{-webkit-transform: rotateY(0deg);}
+	50%{-webkit-transform: rotateY(180deg);}
+	100%{-webkit-transform: rotateY(0deg);}
+}
+
+.cowfix6{
+	left: 53%!important;
+}
+.capture-wrap .fence{
+	position: absolute;
+	/*width: 100%;*/
+	height: 18%;
+	bottom: 16%;
+	z-index: 10;
+}
+.btn{
+	width: 18%;
+    position: absolute;
+    bottom: 8%;
+    right: 4%;
+    z-index: 12;
+}
+.capture-wrap img{
+	display: block;
+	width: 100%;
+}
+
+
+@media all and (orientation:landscape ) {
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.capture-wrap{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../cap-img/cap-bg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+}
+/*util css*/
+/* 信息提示dialog样式 fixed*/
+.indexct_tips , .prize-layer,.successTips{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+    z-index: 99;
+}
+.successTips{
+    position: fixed;
+    width: 60%;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.prize-layer .prize-wrap{
+	width: 80%;
+	padding: 18px 0px;
+	background-image: url(../cap-img/award-fram.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: left top;
+	margin-left: 10%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.prize-layer .prize-txt{
+	margin-top: 10%;
+	text-align: center;
+}
+.prize-layer .prize-txt h1{
+	font-size: 24px;
+}
+.prize-layer .prize-txt p{
+	font-size: 18px;
+	margin-top: 6%;
+}
+.prize-layer input,.express-area{
+	padding-left: 2%;
+	outline: none;
+	border: none;
+	width: 66%;
+	height: 30px;
+	line-height: 25px;
+	margin-top: 10px;
+	border-radius: 4px;
+	background: #819b23;
+	/*margin-left: 16%;*/
+	color: #b4d247;
+}
+.express-area{
+	margin-left: 17%;
+	overflow: hidden;
+}
+.prize-layer input::-webkit-input-placeholder{
+	color: #b4d247;
+}
+.prize-layer .prize-confirm img{
+    width: 30%;
+    display: block;
+    margin: 8% auto;
+}
+.indexct_tips_overlay {
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.indexct_tips p {
+    margin: 0 0 15px;
+    color: #FFFFFF;
+    z-index: 10000;
+    font-size: 16px;
+    display: block;
+    line-height: 25px;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 5px;
+    -webkit-margin-end: 5px;
+}
+
+.indexct_tips a {
+    color: #FFFFFF;
+}
+
+.hidden {
+    display: none!important;
+}
+
+img.lazy{
+    background-size: 50% 50%;background: url(../images/global/loading.gif) center center no-repeat;
+}
+
+.bottom_fix{padding:20px 0 15px 0;position:fixed;bottom:0px;left:0;z-index:100;background:#fff;width:100%; border-top:1px solid #dddddd;}
+.select_region {width: 33.33333333%; float: left;  }
+.f_item.ftp{position: relative}
+
+.hasaddress{display: none}
+.weui_btn_dialog.primary{
+    color:#1478cf;
+}
